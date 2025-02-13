@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            background-image: url('lion.jpg');  
+            background-size: cover;
+        }
+        .navbar {
+            background-color: purple;
+            background-image: linear-gradient(to top, purple , black);
+            overflow: hidden;
+            height: 100px;
+            color: black;
+            font-size: 100px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            position: sticky;
+            top: 0;
+        }
+
+        .marquee {
+            background-color: purple;
+            background-image: linear-gradient(to left, purple , rgb(225, 167, 167));
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            background-color: #e6d0d0;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 430px;
+            margin: 50px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            background-image: linear-gradient(to bottom, purple, black);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .glo:hover {
+            color: #111;
+            box-shadow: 0 0 4px rgb(185, 230, 6);
+            border-color: purple;
+            border-width: 5px;
+        }
+.ribbon {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin:0 auto;
+  font-family: 'Times New Roman', Times, serif;
+}
+.ribbon {
+  --s: 1.8em; 
+  --d: .8em;  
+  --c: .8em; 
+  
+  padding: 0 calc(var(--s) + .5em) var(--d);
+  line-height: 2.8;
+  background:
+    conic-gradient(at left  var(--s) bottom var(--d),
+     #0000 25%,#0008 0 37.5%,#0004 0) 0   /50% 100% no-repeat,
+    conic-gradient(at right var(--s) bottom var(--d),
+     #0004 62.5%,#0008 0 75%,#0000 0) 100%/50% 100% no-repeat;
+  clip-path: polygon(0 var(--d), var(--s) var(--d),var(--s) 0,calc(100% - var(--s)) 0,calc(100% - var(--s)) var(--d),100% var(--d),calc(100% - var(--c)) calc(50% + var(--d)/2),100% 100%,calc(100% - var(--s) - var(--d)) 100%,calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) 100%,0 100%,var(--c) calc(50% + var(--d)/2));
+  background-color: #CC333F; 
+  width: fit-content;
+  background-color: white;
+  background-size: cover;
+  background-image: url('mountain.jpg');
+  -webkit-text-fill-color: #760c6c;
+}
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="ribbon">
+            Welcome To Our Website!
+        </div>
+    </div>
+
+    <div class="marquee">
+        <marquee>Please fill out the details below!.Your Comments and suggestions would be highly appreciated.So,please drop a feedback.For any queries,contact abc123@gmail.com</marquee>
+    </div>
+
+    <div class="form-container">
+        <h3>Personal Information Form</h3>
+        <form >
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth (dd-mm-yyyy):</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="pin-code">Pin Code:</label>
+                <input type="text" id="pin-code" name="pin-code" pattern="[0-9]{6}" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact No.:</label>
+                <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject of Interest:</label><br>
+                <input type="radio" id="subject" name="subject" required>
+                <b>HTML</b><br>
+                <input type="radio" id="subject" name="subject" required>
+                <b>CSS</b><br>
+                <input type="radio" id="subject" name="subject" required>
+                <b>JAVASCRIPT</b><br>
+            </div>
+
+            <div class="form-group">
+                <label for="language">Languages Known:</label><br>
+                <input type="checkbox" id="language" name="language" required>
+                <b>English</b>
+                <input type="checkbox" id="language" name="language" required>
+                <b>Hindi</b>
+                <input type="checkbox" id="language" name="language" required>
+                <b>Telugu</b>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Feedback</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div class="form-actions">
+                <button  class="glo" type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
